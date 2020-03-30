@@ -3,3 +3,7 @@ ERROR: The read operation timed out
 prueba
 Cannot retrieve speedtest configuration
 ERROR: The read operation timed out
+/home/mgreco/github/mmngreco/speedtest/check.sh: línea 2: /home/mgreco/.local/bin/speedtest-cli: No existe el archivo o el directorio
+/home/mgreco/github/mmngreco/speedtest/check.sh: línea 2: /home/mgreco/.local/bin/speedtest-cli: No existe el archivo o el directorio
+Cannot retrieve speedtest configuration
+ERROR: The read operation timed out

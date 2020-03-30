@@ -1,11 +1,11 @@
-#!/home/mgreco/miniconda3/envs/dev/bin/python
+#!/home/mgreco/miniconda3/envs/speedtest/bin/python
 # -*- coding: utf-8 -*-
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib as mpl
 
-raw = pd.read_csv("~/speedtest/test.log")
+raw = pd.read_csv("~/github/mmngreco/speedtest/test.log")
 raw.index = pd.to_datetime(raw.Timestamp)
 
 raw.loc[:, "Download"] = raw.Download.div(1e6)
@@ -38,4 +38,4 @@ axs[-1].xaxis.set_major_locator(mpl.ticker.NullLocator())
 axs[-1].xaxis.set_minor_locator(mpl.ticker.NullLocator())
 plt.xticks(xticks[::freq], xticks_lab[::freq])
 plt.tight_layout()
-plt.savefig("/home/mgreco/speedtest/test.png")
+plt.savefig("/home/mgreco/github/mmngreco/speedtest/test.png")

@@ -1,2 +1,2 @@
 #!/bin/bash
-/home/mgreco/.local/bin/speedtest-cli --csv --server 21378 --single
+/home/mgreco/miniconda3/envs/speedtest/bin/speedtest-cli --csv --server 21378 --single
