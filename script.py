@@ -23,11 +23,14 @@ cols = ["Download", "Upload", "Ping"]
 
 
 raw.loc[:, "Hour"] = raw.index.hour
+raw.query("Download<100").loc[:, cols]
 long_data = raw.loc[:, cols+["Hour"]].melt("Hour")
 long_data.head()
+
+
 sns.catplot(data=long_data, x="Hour", y="value", col="variable", kind="point", sharey=False, estimator=np.mean)
-g = sns.relplot(x="Hour", y="value", col="variable", kind="line", data=long_data, marker="o",
-        facet_kws={"sharey": False})
+g = sns.relplot(x="Hour", y="value", col="variable", kind="line", data=long_data, marker="o", facet_kws={"sharey": False})
+# plt.show()
 plt.savefig("/home/mgreco/github/mmngreco/speedtest/test.png")
 
 by_hour_mean = raw.groupby(lambda x: x.hour)[cols].mean()
